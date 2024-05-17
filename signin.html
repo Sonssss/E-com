@@ -34,7 +34,7 @@
       <form
         action=""
         name="myForm"
-        
+        onsubmit="return validateForm()"
         class="shadow-xl p-10 rounded-xl bg-[#f2ede4]"
       >
         <h1 class="text-center font-extrabold text-2xl mb-1">Sign in</h1>
@@ -69,7 +69,7 @@
         </div>
 
         <div class="flex justify-center items-center">
-          <button id="submit"
+          <button type="submit"
             class="shadow-sm bg-white px-4 py-2 rounded-lg text-center mt-2 font-bold hover:bg-black hover:text-white transition-all duration-150 ease-in"
           >
             Sign in
@@ -78,6 +78,6 @@
       </form>
     </div>
 
-    <script src="./script.js"></script>
+    <script src="./signin.js"></script>
   </body>
 </html>

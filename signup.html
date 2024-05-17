@@ -26,31 +26,31 @@
     </nav>
 
     <div class="flex justify-center items-center h-screen">
-      <form name="myForm" action="" onsubmit="validateForm()" class="shadow-xl p-10 rounded-xl  bg-[#f2ede4] ">
+      <form name="myForm" action="" onsubmit="return validateForm()" class="shadow-xl p-10 rounded-xl  bg-[#f2ede4] ">
         <h1 class="text-center font-extrabold text-2xl mb-1 ">
             Sign up 
         </h1>
         <hr class="bg-black w-full mb-3 ">
         <div class="mb-4 flex  flex-col">
           <label for="name" class="mr-2 mb-1">Name: </label>
-          <input type="text" name="fname" id="fname"
+          <input type="text" name="name" id="fname"
           placeholder="Enter your name"  class="p-1 rounded-sm outline-none"/>
-          <span class="block fnameerror text-red-500 text-xs hidden">error</span>
+         
         </div>
         
         <div class="mb-4 flex  flex-col">
-          <label for="name" class="mr-2 mb-1">Email: </label>
-          <input type="text" id="" placeholder="Enter your email"  class="p-1 rounded-sm outline-none"/>
+          <label for="email" class="mr-2 mb-1">Email: </label>
+          <input name="email" type="text" id="" placeholder="Enter your email"  class="p-1 rounded-sm outline-none"/>
         </div>
 
         <div class="mb-4 flex  flex-col">
-          <label for="name" class="mr-2 mb-1">Password: </label>
-          <input type="text" placeholder="Enter Password" class="p-1 rounded-sm outline-none" />
+          <label for="password" class="mr-2 mb-1">Password: </label>
+          <input name="password" type="text" placeholder="Enter Password" class="p-1 rounded-sm outline-none" />
         </div>
 
         <div class="mb-4 flex  flex-col">
-          <label for="name" class="mr-2 mb-1">Confirm Password: </label>
-          <input type="text" placeholder="Enter Confirm Password"  class="p-1 rounded-sm outline-none"/>
+          <label for="confirmPassword" class="mr-2 mb-1">Confirm Password: </label>
+          <input name="confirmPassword" type="text" placeholder="Enter Confirm Password"  class="p-1 rounded-sm outline-none"/>
         </div>
         <div class="mb-4">
           <h6>
@@ -61,11 +61,11 @@
         </div>
 
         <div class=" flex justify-center items-center">
-            <button class=" shadow-sm bg-white px-4 py-2  rounded-lg  text-center mt-2 font-bold hover:bg-black hover:text-white transition-all duration-200 ease-in">Create Account</button>
+            <button type="submit" class=" shadow-sm bg-white px-4 py-2  rounded-lg  text-center mt-2 font-bold hover:bg-black hover:text-white transition-all duration-200 ease-in">Create Account</button>
         </div>
       </form>
     </div>
 
-    <script src="./script.js"></script>
+    <script src="./signup.js"></script>
   </body>
 </html>
