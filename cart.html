@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <nav class="bg-lime-700 flex justify-around items-center h-16">
+      <a href="./index.html">
+        <img
+          src="./img/logo.png "
+          id="logo"
+          class="w-24 h-24 mr-3"
+          alt="logo"
+        />
+      </a>
+      <ul class="flex gap-10">
+        <li>
+          <input
+            type="text"
+            placeholder="Search for items"
+            class="rounded-md w-60 p-1 animate-pulse"
+          />
+        </li>
+        <a href="./signin.html" class="p-1">Sign in</a>
+        <a href="./signup.html" class="p-1">Sign up</a>
+
+        <a href="cart.html">
+          <img src="./img/cart.png" class="h-10" alt="" />
+        </a>
+      </ul>
+    </nav>
+
+    <main class="mt-10 max-w-screen-2xl mx-20 lg:mx-auto">
+      <table class="w-full">
+        <tr class="border-b">
+          <th>S.N.</th>
+          <th>Product</th>
+          <th>Quantity</th>
+          <th>color</th>
+          <th>Price</th>
+        </tr>
+
+        <tr class="text-center">
+          <td>1</td>
+          <td class="flex justify-center items-center">
+            <img src="./img/airpods.jpeg" class="w-20 h-20" alt="" />
+          </td>
+          <td>
+            <section class="flex justify-center items-center">
+              <div class="mr-2 cursor-pointer text-2xl font-bold" id="sub">
+                -
+              </div>
+              <div id="value">0</div>
+              <div class="ml-2 cursor-pointer text-2xl font-bold" id="add">
+                +
+              </div>
+            </section>
+          </td>
+          <td>Red</td>
+          <td>Rs. 1000</td>
+        </tr>
+      </table>
+    </main>
+  </body>
+  <script>
+    let value = 0;
+    const add = document.getElementById("add");
+    const sub = document.getElementById("sub");
+    const valueEl = document.getElementById("value");
+
+    add.addEventListener("click", () => {
+      value++;
+      valueEl.innerText = value;
+    });
+
+    sub.addEventListener("click", () => {
+      if (value > 0) {
+        value--;
+        valueEl.innerText = value;
+      }
+    });
+  </script>
+</html>
